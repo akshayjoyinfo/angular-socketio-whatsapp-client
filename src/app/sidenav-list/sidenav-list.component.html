@@ -1,0 +1,41 @@
+<mat-toolbar color="primary"><fa name="whatsapp" class="toolbar-logo"></fa><span style="margin-left: 10px;">| WhatsApp Clone - Client Application</span>
+
+  <div fxFlex fxLayout fxLayoutAlign="flex-end">
+
+      <span>
+        Welcome, {{username}}
+      </span>
+
+</div>
+</mat-toolbar>
+<mat-drawer-container class="example-container">
+  <mat-drawer mode="side" opened>
+    <h3 style="text-align: center; color: #607d8b;" color="primary">Channels/Rooms</h3>
+    <mat-divider></mat-divider>
+    <mat-nav-list>
+      <a mat-list-item href="" *ngFor="let room of channelRooms">
+        <ngx-avatar [name]="room.channelTextLog" size="35">
+        </ngx-avatar>
+
+          <span class="message-item">{{room.channelName}}</span>
+          <mat-chip class="message-count" color="primary" selected>4</mat-chip>
+
+      </a>
+    </mat-nav-list>
+    <h3 style="text-align: center; color: #607d8b;" color="primary">Direct Connections</h3>
+    <mat-divider></mat-divider>
+    <mat-nav-list>
+      <a mat-list-item href="" *ngFor="let room of directChannels">
+        <ngx-avatar [name]="room.channelTextLog" size="35">
+        </ngx-avatar>
+
+          <span class="message-item">{{room.channelName}}</span>
+          <mat-chip class="message-count" color="primary" selected>4</mat-chip>
+
+      </a>
+    </mat-nav-list>
+  </mat-drawer>
+  <mat-drawer-content>
+    <router-outlet name="whatsappRouter"></router-outlet>
+  </mat-drawer-content>
+</mat-drawer-container>
