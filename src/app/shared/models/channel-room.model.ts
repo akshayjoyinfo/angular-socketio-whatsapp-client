@@ -3,4 +3,5 @@ export class ChannelRoom {
   channelName: string;
   createdAt: Date;
   channelTextLog: string;
+  namespace: string;
 }

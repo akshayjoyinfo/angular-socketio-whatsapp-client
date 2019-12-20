@@ -1,0 +1,64 @@
+<div class="container clearfix">
+  <div class="chat">
+    <div class="chat-header clearfix">
+      <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/chat_avatar_01_green.jpg" alt="avatar" />
+
+      <div class="chat-about">
+        <div class="chat-with">{{displayName}}</div>
+        <div class="chat-num-messages"></div>
+      </div>
+      <i class="fa fa-star"></i>
+    </div> <!-- end chat-header -->
+
+    <div class="chat-history">
+      <ul>
+        <li class="clearfix" *ngFor="let sentMessage of sentMessages">
+          <div class="message-data align-right">
+            <span class="message-data-time" >{{sentMessage.time}}</span> &nbsp; &nbsp;
+            <span class="message-data-name" >{{sentMessage.from}}</span> <i class="fa fa-circle me"></i>
+
+          </div>
+          <div class="message other-message float-right">
+           {{sentMessage.message}}
+          </div>
+        </li>
+
+        <li *ngFor="let recievedMessage of recievedMessages">
+          <div class="message-data">
+            <span class="message-data-name"><i class="fa fa-circle online"></i> {{recievedMessage.from}}</span>
+            <span class="message-data-time">{{recievedMessage.from}}</span>
+          </div>
+          <div class="message my-message">
+            {{recievedMessage.message}}
+          </div>
+        </li>
+
+
+
+        <li>
+          <div class="message-data">
+            <span class="message-data-name"><i class="fa fa-circle online"></i> Vincent</span>
+            <span class="message-data-time">10:31 AM, Today</span>
+          </div>
+          <i class="fa fa-circle online"></i>
+          <i class="fa fa-circle online" style="color: #AED2A6"></i>
+          <i class="fa fa-circle online" style="color:#DAE9DA"></i>
+        </li>
+
+      </ul>
+
+    </div> <!-- end chat-history -->
+
+    <div class="chat-message clearfix">
+      <textarea name="message-to-send" id="message-to-send" placeholder ="Type your message" rows="3"></textarea>
+
+      <i class="fa fa-file-o"></i> &nbsp;&nbsp;&nbsp;
+      <i class="fa fa-file-image-o"></i>
+
+      <button>Send</button>
+
+    </div> <!-- end chat-message -->
+
+  </div> <!-- end chat -->
+
+</div>

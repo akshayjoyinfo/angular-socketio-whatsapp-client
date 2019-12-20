@@ -1,6 +1,14 @@
-.example-card{
-  margin: auto;
-  width: 35%;
-  padding: 10px;
-  margin-top: 15%;
-}
+.login-main{
+  margin-top: 10%;
+  border-radius: 10px;
+  }
+  mat-card{
+  min-width: 30%;
+  min-height: 50%;
+  height: 50%;
+  }
+
+  .example-header-image {
+    background-image: url('../../favicon.ico');
+    background-size: cover;
+  }

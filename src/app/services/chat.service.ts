@@ -30,6 +30,19 @@ export class ChatService {
     });
   }
 
+  joinRoom(room, username){
+    console.log('Joined Room ' + room);
+    this.socket.emit('room', {room, username});
+  }
+
+  onGroupMessagesRecieved(){
+    return Observable.create(observer => {
+      this.socket.on('group-message', msg => {
+        observer.next(msg);
+      });
+    });
+  }
+
   addConnectedUser(username){
     this.socket.emit('user-connected-client', {
       username

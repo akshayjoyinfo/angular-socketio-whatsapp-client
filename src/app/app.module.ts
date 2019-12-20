@@ -9,6 +9,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NotificaitonTileComponent } from './notificaiton-tile/notificaiton-tile.component';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
+import { ChatWindowComponent } from './chat-window/chat-window.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { HomeComponent } from './home/home.component';
     SidenavListComponent,
     NotificaitonTileComponent,
     LoginComponent,
-    HomeComponent
+    HomeComponent,
+    ChatWindowComponent
   ],
   imports: [
     BrowserModule,
